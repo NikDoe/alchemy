@@ -1,0 +1,189 @@
+@import '../veriables/veriables.scss';
+
+.wrapper-auth {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    .auth-form {
+        padding: 0 5 * $base-space;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h1 {
+            color: $mainColorLight;
+            font-size: $size-l;
+            margin-bottom: 7.59vh;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .form-input {
+                display: flex;
+                align-items: center;
+                margin-bottom: 3.7vh;
+                width: 100%;
+                .fa-envelope,
+                .fa-lock,
+                .fa-user {
+                    z-index: 1;
+                    margin-right: -2.7 * $base-space;
+                    path {
+                        fill: $colorOpacity;
+                    }
+                }
+                .fa-check {
+                    display: none;
+                    margin-left: -2.7 * $base-space;
+                    path {
+                        fill: $mainColorLight
+                    }
+                }
+                .fa-eye-slash {
+                    margin-left: -2.7 * $base-space;
+                    cursor: pointer;
+                    path {
+                        fill: $colorOpacity;
+                    }
+                }
+            }
+            .valid-input {
+                input {
+                    border-bottom: 2px solid $mainColorLight;
+                }
+                .fa-envelope,
+                .fa-lock,
+                .fa-user {
+                    path {
+                        fill: $mainColorLight;
+                    }
+                }
+                .fa-check {
+                    display: block;
+                }
+            }
+            input {
+                width: 100%;
+                height: 5 * $base-space;
+                border: none;
+                outline: none;
+                padding-left: 4.625 * $base-space;
+                font-size: $size-xs;
+                border-bottom: 2px solid $colorOpacity;
+            }
+            input[type=submit] {
+                background: $mainColorLight;
+                cursor: pointer;
+                border: none;
+                color: #FBFBFB;
+                font-size: $size-s;
+                border-radius: $borderRadius;
+                height: 8.75 * $base-space;
+                padding: 0;
+            }
+            input:last-child {
+                margin-bottom: 0;
+            }
+        }
+        span {
+            font-size: $size-s;
+            color: $colorOpacityFive;
+            display: block;
+            margin: 3.125 * $base-space 0;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                width: 21.25 * $base-space;
+                border-top: 2px solid $colorOpacity;
+                margin-top: .6em;
+            }
+            &:before {
+                margin-left: -25.875 * $base-space;
+            }
+            &:after {
+                margin-left: 4.625 * $base-space;
+            }
+        }
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            button {
+                width: 24.375 * $base-space;
+                height: 9.375 * $base-space;
+                cursor: pointer;
+                text-align: center;
+                font-size: $size-s;
+                background: none;
+                border: 1px solid $borderButton;
+                border-radius: $borderRadius;
+                color: $colorOpacityFive;
+            }
+        }
+        form,
+        span,
+        &__buttons {
+            width: 53.875 * $base-space;
+        }
+        .fa-moon {
+            position: absolute;
+            top: 3.125 * $base-space;
+            left: 3.125 * $base-space;
+            cursor: pointer;
+            path {
+                fill: $mainColorLight;
+            }
+        }
+    }
+    .auth-img {
+        width: 50%;
+        background: yellow;
+    }
+}
+
+@media all and (max-width : 992px) {
+    
+    .wrapper-auth {
+        .auth-img {
+            display: none;
+        }
+        .auth-form {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width : 525px) {
+    
+    .wrapper-auth {
+        .auth-form {
+            form, span, &__buttons {
+                width: 36.5 * $base-space;
+            }
+
+            &__buttons {
+                button {
+                    width: 16 * $base-space;
+                    font-size: 1.875 * $base-space;
+                }
+            }
+            
+            span {
+                &:before,
+                &:after {
+                    width: 14 * $base-space;
+                }
+                &:before {
+                    margin-left: -17.25 * $base-space;
+                }
+                &:after {
+                    margin-left: 3.25 * $base-space;
+                }
+            }
+        }
+    }
+}

@@ -6,7 +6,9 @@ module.exports = {
         hot: true,
     },
     entry: { index: path.resolve(__dirname, "src", "index.js") },
-    output: { path: path.resolve(__dirname, "build"), filename: "main.js" },
+    output: { 
+        path: path.resolve(__dirname, "build"), filename: "main.js",
+    },
     module: {
         rules: [
             {
@@ -16,6 +18,13 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+                options: {
+                  publicPath: 'assets',
+                },
             },
         ]
     },

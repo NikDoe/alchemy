@@ -1,4 +1,21 @@
-html {
-    background: red;
-    color: #fff;
+@import './authStyle/auth.scss';
+@import './veriables/veriables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
+
+html {
+    background: #fff;
+    color: #000;
+}
+
+body {
+    font-size: $size-xs;
+}
+
+
