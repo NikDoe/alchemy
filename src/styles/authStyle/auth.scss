@@ -1,0 +1,201 @@
+@import '../veriables/veriables.scss';
+
+.wrapper-auth {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    .auth-form {
+        padding: 0 5 * $base-space;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h1 {
+            color:$main-сolor-light;
+            font-size: $size-4;
+            margin-bottom: 7.59vh;
+            font-weight: 500;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .form-input {
+                display: flex;
+                align-items: center;
+                margin-bottom: 5.087vh;
+                width: 100%;
+                .fa-envelope,
+                .fa-lock,
+                .fa-user {
+                    z-index: 1;
+                    margin-right: -2.7 * $base-space;
+                    path {
+                        fill: $color-opacity-1;
+                    }
+                }
+                .fa-check {
+                    display: none;
+                    margin-left: -2.7 * $base-space;
+                    path {
+                        fill: $main-сolor-light;
+                    }
+                }
+                .fa-eye-slash {
+                    margin-left: -2.7 * $base-space;
+                    cursor: pointer;
+                    path {
+                        fill: $color-opacity-1;
+                    }
+                }
+            }
+            .form-input:nth-child(4) {
+                margin-bottom: 6.36vh;
+            }
+            .valid-input {
+                input {
+                    border-bottom: 2px solid $main-сolor-light;
+                }
+                .fa-envelope,
+                .fa-lock,
+                .fa-user {
+                    path {
+                        fill: $main-сolor-light;
+                    }
+                }
+                .fa-check {
+                    display: block;
+                }
+            }
+            input {
+                width: 100%;
+                height: 5 * $base-space;
+                border: none;
+                outline: none;
+                padding-left: 4.625 * $base-space;
+                font-size: $size-1;
+                color: $color-input;
+                border-bottom: 2px solid $color-opacity-1;
+                font-family: Work Sans;
+                font-weight: normal;
+            }
+            input[type=submit] {
+                background: $main-сolor-light;
+                cursor: pointer;
+                border: none;
+                color: $color-button;
+                font-size: $size-2;
+                border-radius: $border-radius;
+                height: 8.75 * $base-space;
+                padding: 0;
+                font-family: Work Sans;
+                font-weight: 200;
+            }
+        }
+        span {
+            font-size: $size-2;
+            color: $color-opacity-2;
+            display: block;
+            margin: 3.125 * $base-space 0;
+            font-weight: 500;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                width: 21.25 * $base-space;
+                border-top: 2px solid $color-opacity-1;
+                margin-top: .6em;
+            }
+            &:before {
+                margin-left: -25.875 * $base-space;
+            }
+            &:after {
+                margin-left: 4.625 * $base-space;
+            }
+        }
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            button {
+                width: 24.375 * $base-space;
+                height: 9.375 * $base-space;
+                cursor: pointer;
+                text-align: center;
+                font-size: $size-2;
+                background: none;
+                border: 1px solid $border-button;
+                border-radius: $border-radius;
+                color: $color-opacity-2;
+                font-family: Work Sans;
+                font-weight: 200;
+            }
+        }
+        form,
+        span,
+        &__buttons {
+            width: 53.875 * $base-space;
+        }
+        .fa-moon {
+            position: absolute;
+            top: 3.125 * $base-space;
+            left: 3.125 * $base-space;
+            cursor: pointer;
+            path {
+                fill: $main-сolor-light;
+            }
+        }
+    }
+    .auth-img {
+        width: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+          }
+    }
+}
+
+@media all and (max-width : 992px) {
+    
+    .wrapper-auth {
+        .auth-img {
+            display: none;
+        }
+        .auth-form {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width : 525px) {
+    
+    .wrapper-auth {
+        .auth-form {
+            form, span, &__buttons {
+                width: 36.5 * $base-space;
+            }
+
+            &__buttons {
+                button {
+                    width: 16 * $base-space;
+                    font-size: 1.875 * $base-space;
+                }
+            }
+            
+            span {
+                &:before,
+                &:after {
+                    width: 14 * $base-space;
+                }
+                &:before {
+                    margin-left: -17.25 * $base-space;
+                }
+                &:after {
+                    margin-left: 3.25 * $base-space;
+                }
+            }
+        }
+    }
+}
