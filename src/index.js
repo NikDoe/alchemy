@@ -23,11 +23,13 @@ import "@fortawesome/fontawesome-free/js/all";
       circle.style.strokeDashoffset = offSet.toString();
       if ( counter === 100) {
         clearInterval(interval)
-        mask.classList.add('hide');
+        setTimeout(() => {
+          mask.classList.add('hide');
+        }, 1000);
       }
     }, ms)
   }
-  counter(50)
+  counter(1000);
 })();
 
 

@@ -16,7 +16,7 @@
   .progress-ring-circle {
     transform-origin: center;
     transform: rotate(-90deg);
-    transition: stroke-dashoffset 0.5s;
+    transition: stroke-dashoffset 0.1s;
   }
 
   &.hide {
@@ -28,4 +28,15 @@
     font-size: $size-6;
     margin-top: 7.5 * $base-space;
   }
+}
+
+@media all and (max-width : 525px) {
+
+  .mask {
+    .loader-title {
+      font-size: $size-2;
+      margin-top: 7.5 * $base-space;
+    }
+  }
+
 }
