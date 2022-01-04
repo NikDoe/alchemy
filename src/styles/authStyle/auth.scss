@@ -14,9 +14,10 @@
         justify-content: center;
         flex-direction: column;
         h1 {
-            color: $mainColorLight;
-            font-size: $size-l;
+            color:$main-сolor-light;
+            font-size: $size-4;
             margin-bottom: 7.59vh;
+            font-weight: 500;
         }
         form {
             display: flex;
@@ -25,7 +26,7 @@
             .form-input {
                 display: flex;
                 align-items: center;
-                margin-bottom: 3.7vh;
+                margin-bottom: 5.087vh;
                 width: 100%;
                 .fa-envelope,
                 .fa-lock,
@@ -33,33 +34,36 @@
                     z-index: 1;
                     margin-right: -2.7 * $base-space;
                     path {
-                        fill: $colorOpacity;
+                        fill: $color-opacity-1;
                     }
                 }
                 .fa-check {
                     display: none;
                     margin-left: -2.7 * $base-space;
                     path {
-                        fill: $mainColorLight
+                        fill: $main-сolor-light;
                     }
                 }
                 .fa-eye-slash {
                     margin-left: -2.7 * $base-space;
                     cursor: pointer;
                     path {
-                        fill: $colorOpacity;
+                        fill: $color-opacity-1;
                     }
                 }
             }
+            .form-input:nth-child(4) {
+                margin-bottom: 6.36vh;
+            }
             .valid-input {
                 input {
-                    border-bottom: 2px solid $mainColorLight;
+                    border-bottom: 2px solid $main-сolor-light;
                 }
                 .fa-envelope,
                 .fa-lock,
                 .fa-user {
                     path {
-                        fill: $mainColorLight;
+                        fill: $main-сolor-light;
                     }
                 }
                 .fa-check {
@@ -72,34 +76,37 @@
                 border: none;
                 outline: none;
                 padding-left: 4.625 * $base-space;
-                font-size: $size-xs;
-                border-bottom: 2px solid $colorOpacity;
+                font-size: $size-1;
+                color: $color-input;
+                border-bottom: 2px solid $color-opacity-1;
+                font-family: Work Sans;
+                font-weight: normal;
             }
             input[type=submit] {
-                background: $mainColorLight;
+                background: $main-сolor-light;
                 cursor: pointer;
                 border: none;
-                color: #FBFBFB;
-                font-size: $size-s;
-                border-radius: $borderRadius;
+                color: $color-button;
+                font-size: $size-2;
+                border-radius: $border-radius;
                 height: 8.75 * $base-space;
                 padding: 0;
-            }
-            input:last-child {
-                margin-bottom: 0;
+                font-family: Work Sans;
+                font-weight: 200;
             }
         }
         span {
-            font-size: $size-s;
-            color: $colorOpacityFive;
+            font-size: $size-2;
+            color: $color-opacity-2;
             display: block;
             margin: 3.125 * $base-space 0;
+            font-weight: 500;
             &:before,
             &:after {
                 content: '';
                 position: absolute;
                 width: 21.25 * $base-space;
-                border-top: 2px solid $colorOpacity;
+                border-top: 2px solid $color-opacity-1;
                 margin-top: .6em;
             }
             &:before {
@@ -117,11 +124,13 @@
                 height: 9.375 * $base-space;
                 cursor: pointer;
                 text-align: center;
-                font-size: $size-s;
+                font-size: $size-2;
                 background: none;
-                border: 1px solid $borderButton;
-                border-radius: $borderRadius;
-                color: $colorOpacityFive;
+                border: 1px solid $border-button;
+                border-radius: $border-radius;
+                color: $color-opacity-2;
+                font-family: Work Sans;
+                font-weight: 200;
             }
         }
         form,
@@ -135,13 +144,16 @@
             left: 3.125 * $base-space;
             cursor: pointer;
             path {
-                fill: $mainColorLight;
+                fill: $main-сolor-light;
             }
         }
     }
     .auth-img {
         width: 50%;
-        background: yellow;
+        img {
+            width: 100%;
+            height: 100%;
+          }
     }
 }
 
