@@ -31,7 +31,16 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
+            filename: 'index.html',
             template: path.resolve(__dirname, "src", "index.html")
-        })
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'auth.html',
+            template: path.resolve(__dirname, "src", "auth.html")
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'login.html',
+            template: path.resolve(__dirname, "src", "login.html")
+        }),
     ],
 };
