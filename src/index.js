@@ -4,8 +4,14 @@ import "@fortawesome/fontawesome-free/js/solid.js";
 import "@fortawesome/fontawesome-free/js/brands.js";
 import "@fortawesome/fontawesome-free/js/all";
 
-(function() {
-  const mask = document.querySelector('.mask');
+const mask = document.querySelector('.mask');
+
+document.addEventListener('DOMContentLoaded', () => {
+  mask.style.display = 'flex';
+  init();
+})
+
+function init() {
   const circle = document.querySelector('.progress-ring-circle');
   const radius = circle.r.baseVal.value;
   const circumference = 2 * Math.PI * radius;
@@ -29,8 +35,8 @@ import "@fortawesome/fontawesome-free/js/all";
       }
     }, ms)
   }
-  counter(1000);
-})();
+  counter(100);
+}
 
 
 
