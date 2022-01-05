@@ -33,6 +33,14 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src", "index.html"),
             scriptLoading: 'defer'
-        })
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'auth.html',
+            template: path.resolve(__dirname, "src", "auth.html")
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'login.html',
+            template: path.resolve(__dirname, "src", "login.html")
+        }),
     ],
 };
