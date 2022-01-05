@@ -55,6 +55,7 @@
             .form-input:nth-child(4) {
                 margin-bottom: 6.36vh;
             }
+            // add valid class for input
             .valid-input {
                 input {
                     border-bottom: 2px solid $main-сolor-light;
@@ -77,21 +78,22 @@
                 outline: none;
                 padding-left: 4.625 * $base-space;
                 font-size: $size-1;
-                color: $color-input;
+                color: $color-2;
+                background: $color-1;
                 border-bottom: 2px solid $color-opacity-1;
-                font-family: Work Sans;
+                font-family: Work Sans sans-serif;
                 font-weight: normal;
             }
             input[type=submit] {
                 background: $main-сolor-light;
                 cursor: pointer;
                 border: none;
-                color: $color-button;
+                color: $color-1;
                 font-size: $size-2;
                 border-radius: $border-radius;
                 height: 8.75 * $base-space;
                 padding: 0;
-                font-family: Work Sans;
+                font-family: Work Sans sans-serif;
                 font-weight: 200;
             }
         }
@@ -129,9 +131,22 @@
                 border: 1px solid $border-button;
                 border-radius: $border-radius;
                 color: $color-opacity-2;
-                font-family: Work Sans;
+                font-family: Work Sans sans-serif;
                 font-weight: 200;
             }
+        }
+        &__sign-up {
+            width: 53.875 * $base-space;
+            height: 9.375 * $base-space;
+            cursor: pointer;
+            text-align: center;
+            font-size: $size-2;
+            background: none;
+            border: 1px solid $border-button;
+            border-radius: $border-radius;
+            color: $color-opacity-2;
+            font-family: Work Sans sans-serif;
+            font-weight: 200;
         }
         form,
         span,
@@ -173,7 +188,7 @@
     
     .wrapper-auth {
         .auth-form {
-            form, span, &__buttons {
+            form, span, &__buttons, &__sign-up  {
                 width: 36.5 * $base-space;
             }
 
