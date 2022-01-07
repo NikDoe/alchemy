@@ -1,0 +1,252 @@
+@import '../veriables/veriables.scss';
+
+header {
+    background: $color-1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1.5 * $base-space 6.25 * $base-space;
+    .fa-apple-alt {
+        path {
+            fill:$main-сolor-light;
+        }
+    }
+    h1 {
+        color: $main-сolor-light;
+        font-size: $size-4;
+        font-weight: 800;
+        font-family: Work Sans sans-serif;
+        margin-left: 1.875 * $base-space;
+    }
+    .circle-photo {
+        background: #c4c4c4; // это для примера тут будет фотка
+        width: 6.25 * $base-space;
+        height: 6.25 * $base-space;
+        border-radius: 50%;
+        margin-left: auto;
+    }
+    .name-block {
+        display: flex;
+        cursor: pointer;
+        span {
+            font-family: Work Sans sans-serif;
+            font-weight: 200;
+            font-size: $size-2;
+            margin: 0 1.875 * $base-space;
+        }
+        .fa-sort-down {
+            path {
+                fill:$main-сolor-light;
+            }
+        }
+    }
+    .dropdown-menu {
+        background: $color-3;
+        box-shadow: 0px 1px 4px $shadow;
+        padding: 3.75 * $base-space 4.75 * $base-space;
+        position: absolute;
+        right: 5 * $base-space;
+        top: 8.75 * $base-space;
+        display: none;
+        .dorpdown-menu__item {
+            margin-bottom: 3.125 * $base-space;
+            display: flex;
+            align-items: center;
+            .fa-user,
+            .fa-heart,
+            .fa-moon,
+            .fa-sign-in-alt {
+                margin-right: 2 * $base-space;
+                path {
+                    fill: $main-сolor-light;
+                }
+            }
+            span {
+                font-family: Work Sans sans-serif;
+                font-weight: 200;
+                font-size: $size-2;
+            }
+            
+        }
+        .dorpdown-menu__item:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+main {
+    padding: 3.75 * $base-space 6.25 * $base-space;
+    h2 {
+        font-weight: 500;
+        font-size: $size-7;
+        font-family: Work Sans sans-serif;
+        color: $main-сolor-light;
+        margin-bottom: 3.75 * $base-space;
+    }
+    .search-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 6.25 * $base-space;
+        &__input {
+            width: 94.50%;
+            display: flex;
+            align-items: center;
+            background: #fbfbfb;
+            padding: 1.25 * $base-space 2 * $base-space;
+            border-radius: $border-radius-cart;
+            .fa-search {
+                margin-right: 2 * $base-space;
+                height: 3.625 * $base-space;
+                width: 3.125 * $base-space;
+                path {
+                    fill: $main-сolor-light;
+                }
+            }
+            input {
+                width: 100%;
+                border: none;
+                outline: none;
+                background: none;
+            }
+        }
+        &__filter {
+            background: $color-1;
+            padding: 1.25 * $base-space 1.5 * $base-space;
+            border-radius: $border-radius-cart;
+            cursor: pointer;
+            .fa-filter {
+                height: 3.625 * $base-space;
+                width: 3.125 * $base-space;
+                path {
+                    fill: $main-сolor-light;
+                }
+            }
+        }
+        &__filter-active {
+            width: 100%;
+            margin-top: 3.75 * $base-space;
+            .filters-block {
+                display: flex;
+                &__item {
+                    background: $color-1;
+                    border: 1px solid $main-сolor-light;
+                    border-radius: $border-radius-cart;
+                    padding: 1.75 * $base-space 2.75 * $base-space;
+                    margin-right: 2.75 * $base-space;
+                }
+                &__item:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        .filter-active__item {
+            background: $main-сolor-light;
+            color: $color-3;
+        }
+        .filter-active {
+            background: $main-сolor-light;
+            .fa-filter {
+                path {
+                    fill: $color-1;
+                }
+            }
+        }
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: $size-3;
+        font-family: Work Sans sans-serif;
+        color: $main-сolor-light;
+        margin-bottom: 3.75 * $base-space;
+    }
+
+    .card-blocks {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            width: 23%;
+            padding: 1.25 * $base-space;
+            cursor: pointer;
+            background: $color-3;
+            border-radius: $border-radius-cart;
+            &-img {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            p {
+                font-family: Work Sans sans-serif;
+                font-weight: 500;
+                font-size: $size-2;
+                color: $color-2;
+                margin-bottom: 2.5 * $base-space;
+            }
+            ul {
+                li {
+                    font-family: Work Sans sans-serif;
+                    font-weight: 200;
+                    font-size: $size-1;
+                    margin-bottom: 2.5 * $base-space;
+                    span {
+                        color: $main-сolor-light;
+                        font-weight: 500;
+                    } 
+                }
+                li:last-child {
+                    margin-bottom: 3.75 * $base-space;
+                }
+            }
+            &-footer {
+                display: flex;
+                justify-content: space-between;
+                .times {
+                    padding: 1.875 * $base-space 2.25 * $base-space;
+                    background: $main-сolor-light;
+                    border-radius: $border-radius-cart;
+                    color: $color-3;
+                    .fa-clock {
+                        margin-right: 2.25 * $base-space;
+                        path {
+                            fill: $color-1
+                        }
+                    }
+                }
+                button {
+                    background: none;
+                    border: 1px solid $main-сolor-light;
+                    border-radius: $border-radius-cart;
+                    cursor: pointer;
+                    padding: 1.875 * $base-space 2.375 * $base-space;
+                    .fa-bookmark {
+                        path {
+                            fill: $main-сolor-light
+                        }
+                    }
+                }
+            }
+        }
+        &__item:hover {
+            box-shadow: 0px 4px 8px -1px $shadow;
+            transition: box-shadow 0.5s ease;
+        }
+    }
+}
+
+.show-more {
+    margin-top: 8.125 * $base-space;
+    width: 100%;
+    text-align: center;
+    font-size: $size-1;
+    font-family: Work Sans sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+header:hover .dropdown-menu {
+    display: block;
+}
