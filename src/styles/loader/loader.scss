@@ -25,7 +25,7 @@
 
   .loader-title {
     color: $main-сolor-dark;
-    font-size: $size-6;
+    font-size: $size * 9;
     margin-top: 7.5 * $base-space;
   }
 }
@@ -33,7 +33,7 @@
 @media all and (max-width : 525px) {
   .mask {
     .loader-title {
-      font-size: $size-2;
+      font-size: $size * 5;
       margin-top: 7.5 * $base-space;
     }
   }

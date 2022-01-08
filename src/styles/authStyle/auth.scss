@@ -15,7 +15,7 @@
         flex-direction: column;
         h1 {
             color:$main-сolor-light;
-            font-size: $size-4;
+            font-size: $size * 7;
             margin-bottom: 7.59vh;
             font-weight: 500;
         }
@@ -77,7 +77,7 @@
                 border: none;
                 outline: none;
                 padding-left: 4.625 * $base-space;
-                font-size: $size-1;
+                font-size: $size * 4;
                 color: $color-2;
                 background: $color-1;
                 border-bottom: 2px solid $color-opacity-1;
@@ -89,7 +89,7 @@
                 cursor: pointer;
                 border: none;
                 color: $color-1;
-                font-size: $size-2;
+                font-size: $size * 5;
                 border-radius: $border-radius;
                 height: 8.75 * $base-space;
                 padding: 0;
@@ -98,7 +98,7 @@
             }
         }
         span {
-            font-size: $size-2;
+            font-size: $size * 5;
             color: $color-opacity-2;
             display: block;
             margin: 3.125 * $base-space 0;
@@ -126,7 +126,7 @@
                 height: 9.375 * $base-space;
                 cursor: pointer;
                 text-align: center;
-                font-size: $size-2;
+                font-size: $size * 5;
                 background: none;
                 border: 1px solid $border-button;
                 border-radius: $border-radius;
@@ -140,7 +140,7 @@
             height: 9.375 * $base-space;
             cursor: pointer;
             text-align: center;
-            font-size: $size-2;
+            font-size: $size * 5;
             background: none;
             border: 1px solid $border-button;
             border-radius: $border-radius;
@@ -195,7 +195,7 @@
             &__buttons {
                 button {
                     width: 16 * $base-space;
-                    font-size: 1.875 * $base-space;
+                    font-size: $size * 3;
                 }
             }
             
