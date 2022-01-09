@@ -12,7 +12,6 @@ header {
         }
     }
     h1 {
-        color: $main-сolor-light;
         font-size: $size * 7;
         font-weight: 800;
         margin-left: 1.875 * $base-space;
@@ -28,7 +27,6 @@ header {
         display: flex;
         cursor: pointer;
         span {
-            font-weight: 200;
             font-size: $size * 5;
             margin: 0 1.875 * $base-space;
         }
@@ -60,7 +58,6 @@ header {
                 }
             }
             span {
-                font-weight: 200;
                 font-size: $size * 5;
             }
             
@@ -75,13 +72,11 @@ main {
     padding: 3.75 * $base-space 6.25 * $base-space;
     h2 {
         font-weight: 500;
-        font-size: $size * 10;        
-        color: $main-сolor-light;
+        font-size: $size * 10;
         margin-bottom: 3.75 * $base-space;
     }
     .search-content {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-bottom: 6.25 * $base-space;
@@ -101,10 +96,8 @@ main {
                 }
             }
             input {
-                width: 100%;
                 border: none;
-                outline: none;
-                background: none;
+                padding: 0;
             }
         }
         &__filter {
@@ -112,6 +105,8 @@ main {
             padding: 1.25 * $base-space 1.5 * $base-space;
             border-radius: $border-radius-cart;
             cursor: pointer;
+            display: flex;
+            align-items: center;
             .fa-filter {
                 height: 3.625 * $base-space;
                 width: 3.125 * $base-space;
@@ -133,16 +128,25 @@ main {
                     border-radius: $border-radius-cart;
                     padding: 1.75 * $base-space 2.75 * $base-space;
                     cursor: pointer;
+                    &:hover {
+                        background: $main-сolor-light;
+                        color: $color-3;
+                        transition: .6s;
+                    }
                 }
                 &__item:last-child {
                     margin-right: 0;
                 }
             }
         }
+
+        //при выбаре фильтров активный класс
         .filter-active__item {
             background: $main-сolor-light;
             color: $color-3;
         }
+
+        // при клике на фильтр класс который показывает что он активный
         .filter-active {
             background: $main-сolor-light;
             .fa-filter {
@@ -150,6 +154,11 @@ main {
                     fill: $color-1;
                 }
             }
+        }
+        
+        //класс для отключения фильтра
+        .none {
+            display: none;
         }
     }
 
@@ -184,7 +193,6 @@ main {
             }
             ul {
                 li {
-                    font-weight: 200;
                     font-size: $size * 4;
                     margin-bottom: 2.5 * $base-space;
                     span {
@@ -199,6 +207,7 @@ main {
             &-footer {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 .times {
                     padding: 1.875 * $base-space 2.25 * $base-space;
                     background: $main-сolor-light;
@@ -219,8 +228,18 @@ main {
                     padding: 1.875 * $base-space 2.375 * $base-space;
                     .fa-bookmark {
                         path {
-                            fill: $main-сolor-light
+                            fill: $main-сolor-light;
                         }
+                    }
+                    &:hover {
+                        background: $main-сolor-light;
+                        .fa-bookmark {
+                            path {
+                                fill: $color-3;
+                                transition: .6s;
+                            }
+                        }
+                        transition: .6s;
                     }
                 }
             }
