@@ -21,10 +21,11 @@ header {
         width: 6.25 * $base-space;
         height: 6.25 * $base-space;
         border-radius: 50%;
-        margin-left: auto;
     }
     .name-block {
         display: flex;
+        margin-left: auto;
+        align-items: center;
         cursor: pointer;
         span {
             font-size: $size * 5;
@@ -66,6 +67,9 @@ header {
             margin-bottom: 0;
         }
     }
+    .open-dropdown {
+        display: block;
+    } 
 }
 
 main {
@@ -260,9 +264,9 @@ main {
     cursor: pointer;
 }
 
-header:hover .dropdown-menu {
-    display: block;
-}
+// .name-block:hover .dropdown-menu {
+//     display: block;
+// }
 
 @media all and (max-width : 1280px) {
     main {
@@ -291,10 +295,14 @@ header:hover .dropdown-menu {
 @media all and (max-width : 578px) {
     header {
         padding: 1.5 * $base-space  3.125 * $base-space;
+        .dropdown-menu {
+            right: 2.5 * $base-space;
+        }
     }
     main {
         padding: 1.875 * $base-space 3.125 * $base-space;
     }
+
 }
 
 @media all and (max-width : 525px) {
