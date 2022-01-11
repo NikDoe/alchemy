@@ -5,10 +5,24 @@ import "@fortawesome/fontawesome-free/js/brands.js";
 import "@fortawesome/fontawesome-free/js/all";
 
 const mask = document.querySelector('.mask');
+const open = document.querySelector('.search-content__filter')
+const openFilter = document.querySelector('.search-content__filter-active')
+const openDropDown = document.querySelector('.name-block')
+const dropDown = document.querySelector('.dropdown-menu')
 
 document.addEventListener('DOMContentLoaded', () => {
   mask.style.display = 'flex';
   init();
+})
+
+open.addEventListener("click", function() {
+  console.log('click');
+  open.classList.toggle("filter-active");
+  openFilter.classList.toggle("none");
+})
+
+openDropDown.addEventListener("click", function() {
+  dropDown.classList.toggle("open-dropdown")
 })
 
 function init() {

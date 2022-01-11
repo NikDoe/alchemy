@@ -42,5 +42,9 @@ module.exports = {
             filename: 'login.html',
             template: path.resolve(__dirname, "src", "login.html")
         }),
+        new HTMLWebpackPlugin({
+            filename: 'main.html',
+            template: path.resolve(__dirname, "src", "main.html")
+        }),
     ],
 };
