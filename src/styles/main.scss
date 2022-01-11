@@ -39,6 +39,7 @@ input {
   color: $color-2;
   background: $color-1;
   border-bottom: 2px solid $color-opacity-1;
+  font-family: "Work Sans", sans-serif;
 }
 
 button {
@@ -49,10 +50,12 @@ button {
   border: 1px solid $border-button;
   border-radius: $border-radius;
   color: $color-opacity-2;
+  font-family: "Work Sans", sans-serif;
 }
 
 h1, h2 {
   color: $main-сolor-light;
+  font-family: "Work Sans", sans-serif;
 }
 
 ::-webkit-input-placeholder {

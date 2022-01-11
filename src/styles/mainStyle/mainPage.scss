@@ -6,6 +6,10 @@ header {
     display: flex;
     align-items: center;
     padding: 1.5 * $base-space 6.25 * $base-space;
+    a {
+        display: flex;
+        align-items: center;
+    }
     .fa-apple-alt {
         path {
             fill:$main-сolor-light;
@@ -111,11 +115,23 @@ main {
             cursor: pointer;
             display: flex;
             align-items: center;
+            transition: .6s;
             .fa-filter {
                 height: 3.625 * $base-space;
                 width: 3.125 * $base-space;
                 path {
                     fill: $main-сolor-light;
+                    transition: .6s;
+                }
+            }
+            &:hover {
+                background: $main-сolor-light;
+                transition: .6s;
+                .fa-filter {
+                    path {
+                        fill: $color-1;
+                        transition: .6s;
+                    }
                 }
             }
         }
@@ -132,6 +148,7 @@ main {
                     border-radius: $border-radius-cart;
                     padding: 1.75 * $base-space 2.75 * $base-space;
                     cursor: pointer;
+                    transition: .6s;
                     &:hover {
                         background: $main-сolor-light;
                         color: $color-3;
@@ -182,6 +199,7 @@ main {
             padding: 1.25 * $base-space;
             cursor: pointer;
             background: $color-3;
+            transition: .6s;
             border-radius: $border-radius-cart;
             &-img {
                 img {
@@ -229,10 +247,12 @@ main {
                     border: 1px solid $main-сolor-light;
                     border-radius: $border-radius-cart;
                     cursor: pointer;
+                    transition: .6s;
                     padding: 1.875 * $base-space 2.375 * $base-space;
                     .fa-bookmark {
                         path {
                             fill: $main-сolor-light;
+                            transition: .6s;
                         }
                     }
                     &:hover {
@@ -263,10 +283,6 @@ main {
     font-weight: 500;
     cursor: pointer;
 }
-
-// .name-block:hover .dropdown-menu {
-//     display: block;
-// }
 
 @media all and (max-width : 1280px) {
     main {
