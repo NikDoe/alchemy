@@ -44,12 +44,12 @@ function init() {
       if ( counter === 100) {
         clearInterval(interval)
         setTimeout(() => {
-          mask.classList.add('hide');
+          mask.style.display = 'none';
         }, 1000);
       }
     }, ms)
   }
-  counter(100);
+  counter(50);
 }
 
 
