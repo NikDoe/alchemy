@@ -19,10 +19,6 @@
     transition: stroke-dashoffset 0.1s;
   }
 
-  &.hide {
-    opacity: 0;
-  }
-
   .loader-title {
     color: $main-сolor-dark;
     font-size: $size * 9;
